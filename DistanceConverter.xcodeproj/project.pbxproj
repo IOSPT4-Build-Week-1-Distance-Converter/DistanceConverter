@@ -14,6 +14,7 @@
 		1B168EC623A9D7120036098C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B168EC423A9D7120036098C /* LaunchScreen.storyboard */; };
 		1B5A90E923AB1A3C000D5417 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5A90E823AB1A3C000D5417 /* ConverterViewController.swift */; };
 		1B5A90EB23AB1A4C000D5417 /* ConverterBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5A90EA23AB1A4C000D5417 /* ConverterBrain.swift */; };
+		7BA938DA23AB216E0090D1DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BA938D923AB216E0090D1DF /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1B168EC723A9D7120036098C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B5A90E823AB1A3C000D5417 /* ConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
 		1B5A90EA23AB1A4C000D5417 /* ConverterBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterBrain.swift; sourceTree = "<group>"; };
+		7BA938D923AB216E0090D1DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		1B168EAD23A9D7110036098C = {
 			isa = PBXGroup;
 			children = (
+				7BA938D923AB216E0090D1DF /* Default-568h@2x.png */,
 				1B168EB823A9D7110036098C /* DistanceConverter */,
 				1B168EC723A9D7120036098C /* Info.plist */,
 				1B168EB723A9D7110036098C /* Products */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B168EC623A9D7120036098C /* LaunchScreen.storyboard in Resources */,
+				7BA938DA23AB216E0090D1DF /* Default-568h@2x.png in Resources */,
 				1B168EC323A9D7120036098C /* Assets.xcassets in Resources */,
 				1B168EC123A9D7110036098C /* Main.storyboard in Resources */,
 			);
@@ -305,13 +309,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37V89NUM8V;
-				INFOPLIST_FILE = DistanceConverter/Info.plist;
+				DEVELOPMENT_TEAM = DX3RFUH2S9;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chrisprice.DistanceConverter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waseemidelbi.DistanceConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,13 +327,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37V89NUM8V;
-				INFOPLIST_FILE = DistanceConverter/Info.plist;
+				DEVELOPMENT_TEAM = DX3RFUH2S9;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chrisprice.DistanceConverter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waseemidelbi.DistanceConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
