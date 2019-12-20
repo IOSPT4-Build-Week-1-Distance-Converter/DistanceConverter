@@ -16,6 +16,8 @@ class ConverterViewController: UIViewController {
     @IBOutlet var convertToPickerView: UIPickerView!
     
     @IBAction func convertButtonTapped(_ sender: Any) {
+        guard let numbar = numberToConvert.text else {return}
+        let number = Double(numbar)
         
     }
     
