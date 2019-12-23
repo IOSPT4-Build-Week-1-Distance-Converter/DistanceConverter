@@ -29,7 +29,7 @@ enum Units: String {
 
 class ConverterBrain {
     //var userInputNumber: Double
-    var fromUnitType: Units? // Why did we make these optional.
+    var fromUnitType: Units? // Why did we make these optional?
     var toUnitType: Units?
     
    /* init(userInputNumber: Double) {
