@@ -10,6 +10,8 @@ import UIKit
 
 class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
 
+    let units = ["mile", "yard", "feet", "inch", "kilometer", "meter", "decimeter", "centimeter", "millimeter", "nautica mile", "fathom", "league", "furlong", "rod", "chain"]
+    
     var brain = ConverterBrain()
     
     @IBOutlet var numberToConvert: UITextField!
@@ -25,16 +27,12 @@ class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
     }
     
-    func numberOfComponents(in pickerView: UIPickerView  ) -> Int {
-        return 1
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        <#code#>
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return brain.unitsArray.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        brain.unitsArray[row]
+        <#code#>
     }
     
 }
