@@ -26,25 +26,10 @@ enum Units: String {
     case chain
 }
 
-
 class ConverterBrain {
     //var userInputNumber: Double
-    var fromUnitType: Units? // Why did we make these optional?
+    var fromUnitType: Units?
     var toUnitType: Units?
-    
-   /* init(userInputNumber: Double) {
-        self.userInputNumber = userInputNumber
-    }
-    
-    func setUserInputNumber(_ number: String) -> Double {
-        if let userInputNum = Double(number) {
-            userInputNumber = userInputNum
-        }
-        
-        return userInputNumber
-    } */
-    
-    
     
     func from(_ number: Double) -> Double { // convert from user input and desired input units into meters.
         switch fromUnitType {
@@ -94,7 +79,8 @@ class ConverterBrain {
             let result = number * 20.1168
             return result
         case .none:
-            return 0 // What should I actually have done instead of returning 0 and hoping that this case never comes up?
+            #warning("This case returned zero, but the result is actually an unexpected error.")
+            return 0 // The compiler demanded this case, but theoretically the above enum was exhaustive. i.e. This case should never come up.
         }
     }
     
@@ -146,7 +132,8 @@ class ConverterBrain {
             let result = number * 0.0497097
             return result
         case .none:
-            return 0 // What should I actually have done instead of returning 0 and hoping that this case never comes up?
+            #warning("This case returned zero, but the result is actually an unexpected error.")
+            return 0 // The compiler demanded this case, but theoretically the above enum was exhaustive. i.e. This case should never come up.
         }
     }
 }
