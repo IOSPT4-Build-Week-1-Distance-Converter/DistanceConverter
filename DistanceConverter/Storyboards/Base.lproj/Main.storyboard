@@ -92,8 +92,8 @@
                         <viewLayoutGuide key="safeArea" id="Vlr-B1-abY"/>
                     </view>
                     <connections>
+                        <outlet property="convertFromPickerView" destination="TGO-jO-U97" id="UNh-ug-jgY"/>
                         <outlet property="convertToPickerView" destination="vRR-MZ-Rvi" id="8jT-Vx-ZtG"/>
-                        <outlet property="covertFromPickerView" destination="TGO-jO-U97" id="UNh-ug-jgY"/>
                         <outlet property="numberToConvert" destination="WuE-GW-r1y" id="UMw-8W-yLJ"/>
                         <outlet property="result" destination="zaV-VX-ljW" id="gJU-et-OHQ"/>
                     </connections>

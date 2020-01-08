@@ -14,22 +14,27 @@ class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     @IBOutlet var numberToConvert: UITextField!
     @IBOutlet var result: UILabel!
-    @IBOutlet var covertFromPickerView: UIPickerView!
+    @IBOutlet var convertFromPickerView: UIPickerView!
     @IBOutlet var convertToPickerView: UIPickerView!
-    
     @IBAction func convertButtonTapped(_ sender: Any) {
         guard let numbar = numberToConvert.text else {return}
         let number = Double(numbar)
-        brain.from(number!)
+        let result1 = brain.from(number!)
+        let result2 = brain.to(result1)
+        result.text = String(result2)
         
     }
     
-    func numberOfComponents(in pickerView:  ) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView  ) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        <#code#>
+        return brain.unitsArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        brain.unitsArray[row]
     }
     
 }

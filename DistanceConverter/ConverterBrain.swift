@@ -44,7 +44,7 @@ class ConverterBrain {
         return userInputNumber
     } */
     
-    
+    var unitsArray: [String] = ["mile", "yard", "feet", "inch", "kilometer", "meter", "decimeter", "centimeter", "millimeter", "nautical mile", "fathom", "league", "furlong", "rod", "chain"]
     
     func from(_ number: Double) -> Double { // convert from user input and desired input units into meters.
         switch fromUnitType {
