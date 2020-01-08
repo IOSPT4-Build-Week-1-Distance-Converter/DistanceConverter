@@ -26,25 +26,10 @@ enum Units: String {
     case chain
 }
 
-
 class ConverterBrain {
     //var userInputNumber: Double
-    var fromUnitType: Units? // Why did we make these optional?
+    var fromUnitType: Units?
     var toUnitType: Units?
-    
-   /* init(userInputNumber: Double) {
-        self.userInputNumber = userInputNumber
-    }
-    
-    func setUserInputNumber(_ number: String) -> Double {
-        if let userInputNum = Double(number) {
-            userInputNumber = userInputNum
-        }
-        
-        return userInputNumber
-    } */
-    
-    
     
     func from(_ number: Double) -> Double { // convert from user input and desired input units into meters.
         switch fromUnitType {
