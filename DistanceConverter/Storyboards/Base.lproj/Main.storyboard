@@ -47,7 +47,7 @@
                                     <constraint firstAttribute="width" constant="206" id="HDw-PO-NOm"/>
                                 </constraints>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRR-MZ-Rvi">
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRR-MZ-Rvi">
                                 <rect key="frame" x="206" y="680" width="208" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="208" id="D2b-WY-njY"/>
