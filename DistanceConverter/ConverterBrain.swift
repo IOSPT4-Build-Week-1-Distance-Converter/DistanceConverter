@@ -28,8 +28,8 @@ enum Units: String {
 
 class ConverterBrain {
     //var userInputNumber: Double
-    var fromUnitType: Units?
-    var toUnitType: Units?
+    var fromUnitType: Units = .mile
+    var toUnitType: Units = .mile
     
     func from(_ number: Double) -> Double { // convert from user input and desired input units into meters.
         switch fromUnitType {
@@ -37,13 +37,13 @@ class ConverterBrain {
             let result = number * 1609.34
             return result
         case .yard:
-            let result = number * 1609.34
+            let result = number * 0.9144
             return result
         case .feet:
-            let result = number * 1609.34
+            let result = number * 0.3048
             return result
         case .inch:
-            let result = number * 1609.34
+            let result = number * 0.0254
             return result
         case .kilometer:
             let result = number * 1000
@@ -78,9 +78,9 @@ class ConverterBrain {
         case .chain:
             let result = number * 20.1168
             return result
-        case .none:
-            #warning("This case returned zero, but the result is actually an unexpected error.")
-            return 0 // The compiler demanded this case, but theoretically the above enum was exhaustive. i.e. This case should never come up.
+       // case .none:
+         //   #warning("This case returned zero, but the result is actually an unexpected error.")
+           // return 0 // The compiler demanded this case, but theoretically the above enum was exhaustive. i.e. This case should never come up.
         }
     }
     
@@ -131,9 +131,9 @@ class ConverterBrain {
         case .chain:
             let result = number * 0.0497097
             return result
-        case .none:
-            #warning("This case returned zero, but the result is actually an unexpected error.")
-            return 0 // The compiler demanded this case, but theoretically the above enum was exhaustive. i.e. This case should never come up.
+//        case .none:
+//            #warning("This case returned zero, but the result is actually an unexpected error.")
+//            return 0 // The compiler demanded this case, but theoretically the above enum was exhaustive. i.e. This case should never come up.
         }
     }
 }

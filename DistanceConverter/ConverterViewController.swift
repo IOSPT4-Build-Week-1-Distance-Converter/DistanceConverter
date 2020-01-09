@@ -10,7 +10,8 @@ import UIKit
 
 class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
 
-    let units = ["mile", "yard", "feet", "inch", "kilometer", "meter", "decimeter", "centimeter", "millimeter", "nautica mile", "fathom", "league", "furlong", "rod", "chain"]
+    let units = ["mile", "yard", "feet", "inch", "kilometer", "meter", "decimeter", "centimeter", "millimeter", "nautical mile", "fathom", "league", "furlong", "rod", "chain"]
+    
     
     var brain = ConverterBrain()
     
@@ -20,8 +21,11 @@ class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet var convertToPickerView: UIPickerView!
     @IBAction func convertButtonTapped(_ sender: Any) {
         guard let numbar = numberToConvert.text else {return}
-        let number = Double(numbar)
-        let result1 = brain.from(number!)
+        guard let number = Double(numbar) else {
+            result.text = "Please enter a valid number"
+            return
+        }
+        let result1 = brain.from(number)
         let result2 = brain.to(result1)
         result.text = String(result2)
     }
@@ -53,6 +57,83 @@ class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView.tag == 0 {
+            let selectedRow = units[row]
+            switch selectedRow {
+            case "mile":
+                brain.fromUnitType = .mile
+            case "yard":
+                brain.fromUnitType = .yard
+            case "feet":
+                brain.fromUnitType = .feet
+            case "inch":
+                brain.fromUnitType = .inch
+            case "kilometer":
+                brain.fromUnitType = .kilometer
+            case "meter":
+                brain.fromUnitType = .meter
+            case "decimeter":
+                brain.fromUnitType = .decimeter
+            case "centimeter":
+                brain.fromUnitType = .centimeter
+            case "millimeter":
+                brain.fromUnitType = .millimeter
+            case "nautical mile":
+                brain.fromUnitType = .nauticalMile
+            case "fathom":
+                brain.fromUnitType = .fathom
+            case "league":
+                brain.fromUnitType = .league
+            case "furlong":
+                brain.fromUnitType = .furlong
+            case "rod":
+                brain.fromUnitType = .rod
+            case "chain":
+                brain.fromUnitType = .chain
+            default:
+                brain.fromUnitType = .mile
+            }
+            
+        }
+        
+        if pickerView.tag == 1 {
+            let selectedRow = units[row]
+            switch selectedRow {
+            case "mile":
+                brain.toUnitType = .mile
+            case "yard":
+                brain.toUnitType = .yard
+            case "feet":
+                brain.toUnitType = .feet
+            case "inch":
+                brain.toUnitType = .inch
+            case "kilometer":
+                brain.toUnitType = .kilometer
+            case "meter":
+                brain.toUnitType = .meter
+            case "decimeter":
+                brain.toUnitType = .decimeter
+            case "centimeter":
+                brain.toUnitType = .centimeter
+            case "millimeter":
+                brain.toUnitType = .millimeter
+            case "nautical mile":
+                brain.toUnitType = .nauticalMile
+            case "fathom":
+                brain.toUnitType = .fathom
+            case "league":
+                brain.toUnitType = .league
+            case "furlong":
+                brain.toUnitType = .furlong
+            case "rod":
+                brain.toUnitType = .rod
+            case "chain":
+                brain.toUnitType = .chain
+            default:
+                brain.toUnitType = .mile
+            }
+            
+        }
     }
 
 }
