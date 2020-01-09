@@ -24,15 +24,35 @@ class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPicke
         let result1 = brain.from(number!)
         let result2 = brain.to(result1)
         result.text = String(result2)
-        
     }
     
+    //MARK:- Setting up the delegate and data source properties
+    
+    override func viewDidLoad() {
+            super.viewDidLoad()
+                convertToPickerView.delegate = self
+                convertToPickerView.dataSource = self
+                convertFromPickerView.delegate = self
+                convertFromPickerView.dataSource = self
+    }
+    
+    
+    
+    //MARK:-Configuring the Picker Views
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        <#code#>
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        <#code#>
+        return units.count
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return units[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    }
+
 }
