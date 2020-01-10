@@ -43,6 +43,8 @@ class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPicke
                 convertFromPickerView.delegate = self
                 convertFromPickerView.dataSource = self
                 numberToConvert.delegate = self
+        
+        self.setupToHideKeyboardOnTapOnView()
     }
     
     
@@ -149,4 +151,19 @@ class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPicke
             
         }
     }
+}
+
+extension UIViewController {
+  func setupToHideKeyboardOnTapOnView()
+  {
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+      target: self,
+      action: #selector(UIViewController.dismissKeyboard))
+    tap.cancelsTouchesInView = false
+    view.addGestureRecognizer(tap)
+  }
+  @objc func dismissKeyboard()
+  {
+    view.endEditing(true)
+  }
 }
