@@ -25,9 +25,11 @@ class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPicke
             result.text = "Please enter a valid number"
             return
         }
+        let numberFormatter = NumberFormatter()
+        numberFormatter.maximumFractionDigits = 4
         let result1 = brain.from(number)
         let result2 = brain.to(result1)
-        result.text = String(result2)
+        result.text = numberFormatter.string(for: result2)
     }
     
     //MARK:- Setting up the delegate and data source properties
