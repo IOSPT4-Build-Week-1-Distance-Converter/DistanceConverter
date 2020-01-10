@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate{
+    
+    
 
     let units = ["mile", "yard", "feet", "inch", "kilometer", "meter", "decimeter", "centimeter", "millimeter", "nautical mile", "fathom", "league", "furlong", "rod", "chain"]
     
@@ -40,11 +42,21 @@ class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPicke
                 convertToPickerView.dataSource = self
                 convertFromPickerView.delegate = self
                 convertFromPickerView.dataSource = self
+                numberToConvert.delegate = self
     }
     
     
     
     //MARK:-Configuring the Picker Views
+    
+    func hideKeyboard() {
+        numberToConvert.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        hideKeyboard()
+        return true
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -137,5 +149,4 @@ class ConverterViewController: UIViewController, UIPickerViewDataSource, UIPicke
             
         }
     }
-
 }

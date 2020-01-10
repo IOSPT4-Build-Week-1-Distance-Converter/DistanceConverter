@@ -23,7 +23,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqz-ew-SWB">
-                                <rect key="frame" x="147.5" y="424" width="119" height="48"/>
+                                <rect key="frame" x="147.5" y="424.5" width="119" height="48"/>
                                 <color key="backgroundColor" red="0.5049724579" green="0.89720219369999998" blue="0.41558057069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <state key="normal" title="Convert!">
@@ -44,7 +44,7 @@
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGO-jO-U97">
                                 <rect key="frame" x="0.0" y="680" width="206" height="216"/>
-                                <color key="backgroundColor" red="0.4557585716" green="0.89795094730000002" blue="0.89412540200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.78575614890000001" green="0.8915663077" blue="0.91022086140000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="G8N-7V-aIe"/>
@@ -59,8 +59,8 @@
                                     <constraint firstAttribute="height" constant="216" id="gGg-PH-EYi"/>
                                 </constraints>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaV-VX-ljW">
-                                <rect key="frame" x="170.5" y="519" width="73" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaV-VX-ljW">
+                                <rect key="frame" x="204" y="519.5" width="6" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
